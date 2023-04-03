@@ -1,0 +1,94 @@
+{
+  "event": "order-sent",
+  "data": {
+    "createTime": "2023-02-22T20:39:31.005-07:00",
+    "orgName": "BYU",
+    "orgId": "5e21e6d86527d4001eb737a8",
+    "siteName": "Cougar Crust",
+    "siteId": "63c049be451025001cd46c35",
+    "locationId": "63c049d977d51a001d706757",
+    "orderChannel": "Contactless",
+    "diningOption": "Campus Delivery (Contactless)",
+    "source": "Browser (Mobile)",
+    "orderId": "ffffffffffffffffffffff6",
+    "checkIds": [
+      {
+        "vendorName": "Default Vendor",
+        "value": "91852",
+        "name": "posCheckId"
+      }
+    ],
+    "isCancelled": false,
+    "orderNumber": "TEST",
+    "items": [
+      {
+        "posId": "15363739",
+        "name": "Italy Pizza",
+        "price": 0,
+        "modGroups": [
+          {
+            "posId": "15363751",
+            "name": "Size",
+            "mods": [
+              {
+                "posId": "15363745",
+                "name": "14\" Pizza",
+                "price": 1399,
+                "modGroups": []
+              }
+            ]
+          }
+        ],
+        "vendorName": "Default Vendor"
+      },
+      {
+        "posId": "15363735",
+        "name": "Four Cheese Pizza",
+        "price": 0,
+        "modGroups": [
+          {
+            "posId": "15363751",
+            "name": "Size",
+            "mods": [
+              {
+                "posId": "15363745",
+                "name": "14\" Pizza",
+                "price": 1399,
+                "modGroups": []
+              }
+            ]
+          }
+        ],
+        "vendorName": "Default Vendor"
+      }
+    ],
+    "subTotal": 2798,
+    "taxTotal": 0,
+    "tipTotal": 0,
+    "discountNames": [],
+    "discountTotal": 0,
+    "total": 2798,
+    "refundedAmount": 0,
+    "transactions": [
+      {
+        "cardType": "Atrium Student Card",
+        "transactionType": "sale",
+        "amount": 2798,
+        "lastFour": "1235",
+        "gateway": "Atrium",
+        "cardEntryMethod": "Provided Externally"
+      }
+    ],
+    "orderUrl": "https://admin.getbite.com/byu/cougar-crust/kiosk#orders/63f6dff2452362001b34da8e",
+    "futureOrderTime": "2023-02-22T21:30:00.000-07:00",
+    "outpostDeliveryLocation": "Heritage Halls Building 7",
+    "isTaxExempt": true,
+    "serviceChargeTotal": 0,
+    "serviceCharges": [],
+    "guest": {
+      "guestId": "test",
+      "email": "nick.smith@byu.edu",
+      "phoneNumber": "3852854099"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "The Wall": [
+    {
+      "channel": "kiosk",
+      "id": "5e21e6d86527d4001eb737aa"
+    }
+  ],
+  "BYU-testing": [
+    {
+      "channel": "kiosk",
+      "id": "5e7cde1e04a5d90032a9740d"
+    },
+    {
+      "channel": "catering",
+      "id": "629e4ff6d9c2ee001cb46992"
+    }
+  ],
+  "Aloha Plate": [
+    {
+      "channel": "kiosk",
+      "id": "5ec3f0aec8ede40024089baf"
+    },
+    {
+      "channel": "catering",
+      "id": "62b614c94e10bf001c87be3d"
+    }
+  ],
+  "Chick-fil-A": [
+    {
+      "channel": "kiosk",
+      "id": "5ed6e2cdafd4320024808189"
+    }
+  ],
+  "Multivendor \u2014 Test": [
+    {
+      "channel": "kiosk",
+      "id": "5f0744a8de7e1400255f6274"
+    }
+  ],
+  "Blue Line Deli": [
+    {
+      "channel": "kiosk",
+      "id": "5f08bc69525752002ddc58d4"
+    }
+  ],
+  "Wendy's": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb4bcfe9585003165e48b"
+    }
+  ],
+  "Subway": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb51ffe9585003165e4bf"
+    }
+  ],
+  "Choices": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb58ea22f07001efb9ab0"
+    }
+  ],
+  "Cougar Cafe": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb5ebfe9585003165e51a"
+    }
+  ],
+  "Jamba SAB": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb740e9757800251eb567"
+    }
+  ],
+  "Jamba WSC": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb796a22f07001efb9b91"
+    }
+  ],
+  "Milk and Cookies": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb817a22f07001efb9bc6"
+    },
+    {
+      "channel": "catering",
+      "id": "62cf3a53cc0bbb001ce054cd"
+    }
+  ],
+  "MOA Cafe": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb881c27c9f001ef45f22"
+    }
+  ],
+  "Papa John's": [
+    {
+      "channel": "kiosk",
+      "id": "5f0cb8f0c27c9f001ef45f56"
+    },
+    {
+      "channel": "catering",
+      "id": "62cf3911a66a11001c5e9469"
+    }
+  ],
+  "Taco Bell": [
+    {
+      "channel": "kiosk",
+      "id": "5ff75702f044ed00253116c8"
+    }
+  ],
+  "Multivendor \u2014 Test 2": [
+    {
+      "channel": "kiosk",
+      "id": "601dae8b79dfb5001ef100dd"
+    }
+  ],
+  "Jamba Duplicate": [
+    {
+      "channel": "kiosk",
+      "id": "603408d68ec9ea002c5238aa"
+    }
+  ],
+  "Helaman Creamery Grill": [
+    {
+      "channel": "kiosk",
+      "id": "60b7a03412af9000326216aa"
+    }
+  ],
+  "Creamery on Ninth Grill": [
+    {
+      "channel": "kiosk",
+      "id": "60b7a1d302bfc300329de563"
+    }
+  ],
+  "Coupons demo": [
+    {
+      "channel": "kiosk",
+      "id": "60b7c62e4e0ca4001e7fff96"
+    }
+  ],
+  "test location": [
+    {
+      "channel": "kiosk",
+      "id": "60fac3981604f40033f5c0d3"
+    }
+  ],
+  "Campus Floral": [
+    {
+      "channel": "kiosk",
+      "id": "62a7abfab2127b001ce218c8"
+    }
+  ],
+  "Blue Ribbon Box": [
+    {
+      "channel": "catering",
+      "id": "62ba24917731b0001c247bb7"
+    },
+    {
+      "channel": "kiosk",
+      "id": "62ba24a25a1d70002032051a"
+    }
+  ],
+  "Creamery Marketplace": [
+    {
+      "channel": "kiosk",
+      "id": "63054b392c22da001df54efc"
+    }
+  ], 
+  "Cloned - Creamery Market": [
+    {
+      "channel": "kiosk",
+      "id": "6359971696f11d001c5c4a4f"
+    }
+  ],
+  "Cougar Crust": [
+    {
+      "channel": "kiosk",
+      "id": "63c049d977d51a001d706757"
+    },
+    {
+      "channel": "catering",
+      "id": "63c04b008fea8a001d62c085"
+    }
+  ]
+}

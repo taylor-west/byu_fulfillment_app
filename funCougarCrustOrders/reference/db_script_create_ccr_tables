@@ -1,0 +1,52 @@
+/****** CREATE TABLES ******/
+
+/*** CougarCrustOrders ***/
+CREATE TABLE [dbo].[CougarCrustOrders] (
+    [OrderID]           INT           IDENTITY (1, 1) NOT NULL,
+    [BiteOrderID]       VARCHAR (50)  NOT NULL,
+    [BiteOrderNum]      VARCHAR (50)  NOT NULL,
+    [CreatedDate]       DATETIME      NOT NULL,
+    [DiningOption]      INT           NOT NULL,
+    [OutpostLocationID] INT           NULL,
+    [ReadyDate]         DATETIME      NOT NULL,
+    [ReadyDateString]   AS            (CONVERT([varchar](10),[ReadyDate],(101))),
+    [ReadyTimeString]   AS            (CONVERT([varchar](8),format([ReadyDate],'h:mm tt'))),
+    [GuestID]           VARCHAR (50)  NOT NULL,
+    [GuestEmail]        VARCHAR (50)  NOT NULL,
+    [GuestPhone]        VARCHAR (50)  NULL,
+    [FulfillmentStatus] INT           NOT NULL,
+    [DeliveryAddress]   VARCHAR (MAX) NULL,
+    [LastModified]      ROWVERSION    NOT NULL,
+    [TextMessageStatus] INT           DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_CougCrustOrders] PRIMARY KEY NONCLUSTERED ([OrderID] ASC),
+    CONSTRAINT [UNIQUE_CougCrustOrders_BiteOrderID] UNIQUE NONCLUSTERED ([BiteOrderID] ASC),
+    CONSTRAINT [FK_CougCrustOrders_OutpostLocationID] FOREIGN KEY ([OutpostLocationID]) REFERENCES [dbo].[OutpostLocations] ([OutpostID]),
+    CONSTRAINT [FK_CougCrustOrders_FulfillmentStatus] FOREIGN KEY ([FulfillmentStatus]) REFERENCES [dbo].[FulfillmentStatuses] ([StatusID]),
+    CONSTRAINT [FK_CougCrustOrders_DiningOption] FOREIGN KEY ([DiningOption]) REFERENCES [dbo].[DiningOptions] ([OptionID]),
+    CONSTRAINT [CHECK_CougCrustOrders_has_delivery] CHECK (NOT ([OutpostLocationID] IS NULL AND [DeliveryAddress] IS NULL)),
+    CONSTRAINT [CHECK_CougCrustOrders_has_only_one_delivery] CHECK ([OutpostLocationID] IS NULL OR [DeliveryAddress] IS NULL)
+);
+
+/*** CougarCrustOrderItems ***/
+CREATE TABLE [dbo].[CougarCrustOrderItems] (
+    [OrderItemID] INT           IDENTITY (1, 1) NOT NULL,
+    [OrderID]     INT           NOT NULL,
+    [ModString]   VARCHAR (MAX) NOT NULL,
+    [ItemName]    VARCHAR (50)  NOT NULL,
+    [Quantity]    TINYINT       NOT NULL,
+    [SpecialNote] VARCHAR (MAX) NULL,
+    CONSTRAINT [PK_CougCrustOrderItems] PRIMARY KEY NONCLUSTERED ([OrderItemID] ASC),
+    CONSTRAINT [FK_CougCrustOrderItems_OrderID] FOREIGN KEY ([OrderID]) REFERENCES [dbo].[CougarCrustOrders] ([OrderID])
+);
+
+
+/****** INSERTS SET-UP INFO ******/
+USE [ordering-app-db]
+GO
+
+INSERT INTO CougarCrustPizzaPosIds VALUES (15363740)
+INSERT INTO CougarCrustPizzaPosIds VALUES (15363736)
+INSERT INTO CougarCrustPizzaPosIds VALUES (15363737)
+INSERT INTO CougarCrustPizzaPosIds VALUES (15363739)
+INSERT INTO CougarCrustPizzaPosIds VALUES (15363735)
+GO

@@ -1,0 +1,144 @@
+body: {
+    event: "order-sent",
+    data: {
+        createTime: "2023-02-22T19:33:42.559-05:00",
+        orgName: "Burger Heaven",
+        orgId: "61aa4ee3a4402f0030e8j23j",
+        siteName: "New York Beach",
+        siteId: "6331f1140bc1b5001c8c2i1u", 
+        locationId: "6331f136e6eeee001dd28s765", 
+        orderChannel: "Kiosk",
+        diningOption: "To Go (Kiosk)",
+        source: "Kiosk (A)",
+        orderId: "63f6b466db8b95001bc5j2b1", 
+        checkIds: [
+            {
+                vendorName: "Default Vendor",
+                value: "e4ed2fb2-1f4f-4886-8369-81adeb4e123", name: "posCheckId"
+            }
+        ],
+    isCancelled: false, 
+    orderNumber: "A1234", 
+    items: [
+        {
+            posId: "3cd56c45-f4f4-4bf0-bb33-bbbad39ca676",
+            name: "Sweet Apple Orchard Salad",
+            price: 1149, 
+            modGroups: [
+            {
+            "942cd99c-f85d-4496-a081-945f79df2894", "Pick a Protein",
+            [
+            posId: name: mods:
+            }
+    ]
+    }, {
+    posId: name: mods:
+    "d89ae330-dd20-4451-a4c4-2bcdb323e46a", "Dressing",
+    [
+    {
+    posId: "3a125561-041a-42db-83cf-89531cd454b7", name: "No Protein",
+    price: 0,
+    modGroups: []
+    {
+    posId: "2e683a49-89ce-475d-98f3-2b5feb3ea3b1",
+    https://getbite.zendesk.com/hc/en-us/articles/13433960302868 2/6
+
+    2/23/23, 1:47 PM
+    Bite order webhooks for operators – Bite Kiosk
+    name: "White Balsamic Vinaigrette", price: 0,
+    modGroups: [
+    {
+    posId: "2401a3e3-624e-43d5-876d-d9a8e17709c3", name: "Dressing Placement",
+    mods: [
+    {
+    posId: "cb9a17fe-8ded-4057-987e-f53b4a6c7b43", name: "Mixed In — Regular",
+    price: 0,
+    modGroups: []
+    } ]
+    } ]
+    } ]
+    }, {
+    posId: "ee5fb4bc-a2f5-4c1a-8cf8-6a8901ace063", name: "Artisanal Bread",
+    mods: [
+    {
+    posId: "73affc48-2520-49db-82b5-13fcb2545a7e", name: "Include Bread",
+    price: 0,
+    modGroups: []
+    } ]
+    }, {
+    posId: "783956c8-f557-463b-a0db-fdbd1a48318b", name: "Greens",
+    mods: [
+    {
+    posId: "b83ac783-72f8-40b2-b895-ae6c4ca20b88", name: "Romaine",
+    price: 0,
+    modGroups: []
+    https://getbite.zendesk.com/hc/en-us/articles/13433960302868 3/6
+
+    2/23/23, 1:47 PM
+    Bite order webhooks for operators – Bite Kiosk
+    }, {
+    } ]
+    }, {
+    posId: "dc64b240-f97e-45b3-9429-59cc19c9d2b5", name: "Chopt Lettuce Blend",
+    price: 0,
+    modGroups: []
+    posId: "1113d758-9e25-4556-b079-5fc936bcaf84", name: "Choppings",
+    mods: [
+    {
+    posId: "b3358a87-1fed-4c97-bde4-5e7bdc87b33f", name: "Seasonal Apples",
+    price: 0,
+    modGroups: []
+    }, {
+    }, {
+    }, {
+    }, {
+    posId: "a9be04c8-4a5f-4e33-b8cf-46fd9543eaf2", name: "Dried Cran-berries",
+    price: 0,
+    modGroups: []
+    posId: "00f35873-faaa-405c-913d-42a746ec2145", name: "Roasted Almonds",
+    price: 0,
+    modGroups: []
+    posId: "8fcac934-60fb-4e7e-9b34-18ac698aa4a3", name: "Goat Cheese",
+    price: 0,
+    modGroups: []
+    posId: "037c6b55-21cf-4068-84ba-18b3ee51f998", name: "Chickpeas",
+    https://getbite.zendesk.com/hc/en-us/articles/13433960302868 4/6
+
+    2/23/23, 1:47 PM
+    Bite order webhooks for operators – Bite Kiosk
+    price: 79,
+    modGroups: [] }
+    ] }
+    ],
+    specialRequest: null, vendorName: "Default Vendor"
+    }, {
+    vendorName: "Default Vendor" }
+    ],
+    subTotal: 1507, taxTotal: 134, tipTotal: 0, discountNames: [], discountTotal: 0, total: 1641, refundedAmount: 0, transactions: [
+    {
+    cardType: "Visa", transactionType: "sale", amount: 1641,
+    lastFour: "1234",
+    gateway: "Worldpay", cardEntryMethod: "Contactless"
+    } ],
+    orderUrl: "https://admin.getbite.com/burgerheaven/newyork/12345567879", futureOrderTime: null,
+    outpostDeliveryLocation: null,
+    deliveryAddress: null,
+    tableNumber: null,
+    posId: "3c2316d9-c577-4613-ad7f-663507366129", name: "Proud Source Still Water",
+    price: 279,
+    modGroups: [],
+    specialRequest: null,
+    https://getbite.zendesk.com/hc/en-us/articles/13433960302868 5/6
+
+    2/23/23, 1:47 PM
+    Bite order webhooks for operators – Bite Kiosk
+    } },
+    isTaxExempt: false, serviceChargeTotal: 0, serviceCharges: [], guest: {
+    guestId: "01573ca4748bfcf9c5681j12", name: "Bob",
+    satisfactionScore: null,
+    email: null,
+    phoneNumber: "6141234567",
+    vehicle: null
+    }
+    }
+}

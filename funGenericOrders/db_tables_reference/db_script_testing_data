@@ -1,0 +1,84 @@
+
+
+/******************************* DUMMY TEST INFO FOR TESTING PURPOSES *******************************/
+/* these statements are not necessarily meant to be run consecutively, but can be useful
+    in determining if certain things are working correctly */
+
+
+    /* delivery constraint test*/
+        /* checks the delivery constraint (has fulfillment site but no delivery address) */
+        Insert
+            INTO dbo.Orders (BiteOrderID, BiteOrderNum, CreatedDate, DiningOption, OriginSiteID, OutpostLocationID,
+                            ReadyDate, GuestID, GuestEmail, GuestPhone, FulfillmentStatus, DeliveryAddress)
+            VALUES ('tesBiteOrderID1',
+                    'testNum1',
+                    '1997-12-31 12:00:01',
+                    '1',
+                    '10',
+                    '5',
+                    '1997-12-31 12:00:02',
+                    'testGuestID',
+                    'test@email.com',
+                    '10000000',
+                    '3',
+                    NULL)
+
+        /* checks the delivery constraint (has delivery address but no fulfillment site) */
+        INSERT
+            INTO dbo.Orders (BiteOrderID, BiteOrderNum, CreatedDate, DiningOption, OriginSiteID, OutpostLocationID,
+                            ReadyDate, GuestID, GuestEmail, GuestPhone, FulfillmentStatus, DeliveryAddress)
+            VALUES ('tesBiteOrderID2',
+                    'testNum2',
+                    '1997-12-31 12:00:01',
+                    '1',
+                    '10',
+                    NULL,
+                    '1997-12-31 12:00:02',
+                    'testGuestID',
+                    'test@email.com',
+                    '10000000',
+                    '3',
+                    'testDeliveryAddress' )
+
+    /*  multi-level modstring test */
+    /*  OrderItem modstring should look like this:
+        Test Kiosk
+            - Test Kiosk Modifiers
+                - .test modifier 1
+                    - Ice Cream Flavor
+                        - Bishop's Bash
+    */
+        /* multi-level modstring test Order (used for the OrderItem below)*/
+        INSERT
+            INTO dbo.Orders (BiteOrderID, BiteOrderNum, CreatedDate, DiningOption, OriginSiteID, OutpostLocationID,
+                            ReadyDate, GuestID, GuestEmail, GuestPhone, FulfillmentStatus, DeliveryAddress)
+            VALUES ('multi_level_test_order_bite_ID',
+                    '0000000',
+                    '2022-12-12 12:00:01',
+                    '1',
+                    '10',
+                    '5',
+                    '2022-12-31 14:00:00',
+                    'testGuestID',
+                    'test@email.com',
+                    '8888888888',
+                    '1',
+                    NULL )
+
+        /* multi-level modstring test OrderItem (connects to the Order above)*/
+
+        INSERT
+        INTO dbo.OrderItems (
+                                OrderID,
+                                ItemName,
+                                ModString,
+                                Quantity,
+                                SpecialNote)
+        VALUES (
+                (SELECT (OrderID) FROM dbo.Orders WHERE BiteOrderID='multi_level_test_order_bite_ID'),
+                'Test Kiosk',
+                '   ' + '- ' + 'Test Kiosk Modifiers' + CHAR(13) + CHAR(10) + '   ' + '   ' + '- ' + '.test modifier 1' + CHAR(13) + CHAR(10) + '   ' + '   ' + '   '  + '- ' + 'Ice Cream Flavor' + CHAR(13) + CHAR(10) + '   ' + '   ' + '   ' + '   ' + '- ' + 'Bishop''s Bash',
+                2,
+                NULL)
+
+        SELECT * FROM dbo.OrderItems
