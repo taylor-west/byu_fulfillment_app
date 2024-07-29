@@ -2,6 +2,6 @@
   "IsEncrypted": false,
   "Values": {
     "FUNCTIONS_WORKER_RUNTIME": "python",
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=biteorderfulfillmentapp;AccountKey=8z08fc+WHtZW9iYcj5i514U77gy97wHU/OwR1YeHD39gDh9UFUfoqDlaviQ/PlZwui8V3dxkpG68+AStZX6Nuw==;EndpointSuffix=core.windows.net"
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=biteorderfulfillmentapp;AccountKey=0000==;EndpointSuffix=core.windows.net"
   }
 }
